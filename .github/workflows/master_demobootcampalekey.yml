@@ -22,10 +22,10 @@ jobs:
           dotnet-version: '8.x'
 
       - name: Build with dotnet
-        run: dotnet build --configuration Release ./path/to/your/project.sln  # Asegúrate de que esta ruta sea correcta
+        run: dotnet build --configuration Release ./HTML-Validations.sln  # Ruta correcta al archivo de solución
 
       - name: dotnet publish
-        run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp ./HTML-Validations.sln  # Asegúrate de que esta ruta sea correcta
+        run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp ./HTML-Validations.sln  # Ruta correcta al archivo de solución
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
